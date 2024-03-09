@@ -7,19 +7,21 @@ Cars audi = new Cars("Audi", 450, "Blue");
 audi.Drive();
 audi.Description();
 bmw.Description();
+Phone samsung = new Phone("Samsung", "S23 Ultra", "2023");
 
 Console.WriteLine("Press 1 to stop");
 string userInput = Console.ReadLine();
-if(userInput == "1")
+if (userInput == "1")
 {
     bmw.Stop();
 }
-else if(userInput == "2")
+else if (userInput == "2")
 {
     audi.Stop();
 }
 else
 {
+
     {
         Console.WriteLine("Car drives forever");
     }
@@ -40,13 +42,13 @@ public class Phone
         Company = "unknown";
         Model = "unknown";
         ReleaseDay = "unknown";
-        }
+    }
 
-    public Phone(string company, String model, String releaseDay = "unknown")
+    public Phone(string company, String model)
     {
         Company = company;
         Model = model;
-        ReleaseDay = releaseDay;
+        ReleaseDay = "unknown";
     }
 
     public Phone(string company, String model, String releaseDay)
@@ -55,3 +57,4 @@ public class Phone
         Model = model;
         ReleaseDay = releaseDay;
     }
+}
